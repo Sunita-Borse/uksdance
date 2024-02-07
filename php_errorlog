@@ -1,0 +1,3 @@
+[02-Jan-2024 10:33:51 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\AuthController::resetPasswordload() in /home/customer/www/vedak8.sg-host.com/public_html/app/Http/Controllers/AuthController.php on line 165
+[11-Jan-2024 06:20:53 UTC] PHP Fatal error:  Case KATHAK of non-backed enum App\Enums\Dancestyle must not have a value, try adding ": string" to the enum declaration in /home/customer/www/vedak8.sg-host.com/public_html/app/Enums/Dancestyle.php on line 7
+[16-Jan-2024 11:10:26 UTC] PHP Fatal error:  Cannot declare class AddUserIdToStudentinfosTable, because the name is already in use in /home/customer/www/vedak8.sg-host.com/public_html/database/migrations/2024_01_11_173907_add_user_id_to_studentinfoss_table.php on line 7
