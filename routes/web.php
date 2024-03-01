@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SyllabusController;
 use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\BatchController;
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\QuestionPaperController;
 use App\Models\Syllabus;
 use App\Http\Controllers\Auth\LoginController;
@@ -179,6 +181,23 @@ Route::get('/downloadfile/{file}', [AdminController::class,'downloadfile']);
 
  Route::get('/samplequestion',[AdminController::class,'samplequestion']);
  Route::get('/downloadfile/{file}', [AdminController::class,'downloadfile']);
+
+ //Route::get('/batches/createbatch',[BatchController::class,'index']);
+
+ Route::get('/batches/createbatch', [BatchController::class, 'index'])->name('batches.createbatch');
+ Route::post('/batches/store', [BatchController::class, 'store'])->name('batches.store');
+ Route::put('/batches/{batch}', [BatchController::class, 'update'])->name('batches.update');
+Route::get('/batches/showbatches', [BatchController::class, 'show'])->name('batches.show');
+Route::get('/batches/{batch}/editbatch', [BatchController::class, 'edit'])->name('batches.edit');
+Route::get('/batches/{batch}/delete', 'BatchController@destroy')->name('batches.destroy');
+
+
+Route::get('/branches/createbranch', [BranchController::class, 'index'])->name('branches.createbranch');
+ Route::post('/branches/store', [BranchController::class, 'store'])->name('branches.store');
+ Route::put('/branches/{branch}', [BranchController::class, 'update'])->name('branches.update');
+Route::get('/branches/showbranches', [BranchController::class, 'show'])->name('branches.show');
+Route::get('/branches/{branch}/editbranch', [BranchController::class, 'edit'])->name('branches.edit');
+Route::get('/branches/{branch}/delete', 'BranchController@destroy')->name('braches.destroy');
 
 });
 
